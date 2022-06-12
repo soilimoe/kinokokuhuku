@@ -3,241 +3,139 @@
   margin: 0;
   font-family: 'Zen Maru Gothic', sans-serif;
   color: #775B3C;
+  box-sizing: border-box;
+  padding: 0;
+  /* float: left; */
 }
 
-
-/* a {
-  text-decoration: none;
+::before,
+::after {
+  box-sizing: inherit;
 }
 
-ul,
-li {
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  vertical-align: middle;
+  text-align: inherit;
+  font: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.menu {
+  width: 100%;
+  height: 100vh;
+  margin-left: auto;
+  /* メニューを縦に */
+  display: flex;
+  flex-direction: column;
+  color: #775B3C;
+  background-color: #775B3C;
+  transition: .3s;
+
+  /* メニューの位置マイナス指定で画面外に */
+  position: fixed;
+  right: -100%;
+}
+
+.menu li {
   list-style: none;
 }
 
-/* ヘッダー */
-
-
-/* .header {
-  background-color: white;
+.menu-list a {
+  color: #EEE1D1;
   width: 100%;
-  height: 50px;
-  position: fixed;
-  margin: 0;
-  z-index: 999;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: inherit;
-  position: relative;
-}
-
-/* ヘッダーのナビ部分 */
-
-/* .header__nav {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  transform: translateX(100%);
-  background-color: #fff;
-  transition: ease .4s;
-}
-
-
-@media screen and (min-width: 960px) {
-  .header__nav {
-    position: static;
-    transform: initial;
-    background-color: inherit;
-    height: inherit;
-    display: flex;
-    justify-content: end;
-    width: 50%;
-  }
-}
-
-
-@media screen and (min-width: 960px) {
-  .nav__items {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: initial;
-    justify-content: space-between;
-  }
-}
-
-.nav-items {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0;
-}
-
-@media screen and (min-width: 960px) {
-  .nav-items {
-    position: inherit;
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-  }
-}
-
-/* ナビのリンク */
-/* .nav-items__item a {
-  color: black;
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 24px;
-  color: black;
-}
-
-.nav-items__item:last-child a {
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 960px) {
-  .nav-items__item a {
-    margin-bottom: 0;
-  }
-}
-
-
-/* ハンバーガーメニュー */
-
-/* .header__hamburger {
-  width: 48px;
   height: 100%;
-
+  /* メニューテキスト位置をリスト内中心に */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 12vh;
 }
 
-.hamburger {
-  background-color: transparent;
-  border-color: transparent;
-  z-index: 9999;
-}
-
-@media screen and (min-width: 960px) {
-  .hamburger {
-    display: none;
-  }
-}
-
-/* ハンバーガーメニューの線 */
-/* .hamburger span {
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  position: relative;
-  transition: ease .4s;
-  display: block;
-}
-
-.hamburger span:nth-child(1) {
-  top: 0;
-}
-
-.hamburger span:nth-child(2) {
-  margin: 8px 0;
-}
-
-.hamburger span:nth-child(3) {
-  top: 0;
-}
-
-
-/* ハンバーガーメニュークリック後のスタイル */
-/* .header__nav.active {
-  transform: translateX(0);
-}
-
-.hamburger.active span:nth-child(1) {
-  top: 5px;
-  transform: rotate(45deg);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-
-}
-
-.hamburger.active span:nth-child(3) {
-  top: -13px;
-  transform: rotate(-45deg);
-} */
-
-.nav_toggle {
-  display: block;
-  position: relative;
-  width: 1.75rem;
-  height: 1.5rem;
-}
-
-.nav_toggle i {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #333;
-  position: absolute;
-  transition: transform .5s, opacity .5s;
-}
-
-.nav_toggle i:nth-child(1) {
-  top: 0;
-}
-
-.nav_toggle i:nth-child(2) {
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.nav_toggle i:nth-child(3) {
-  bottom: 0;
-}
-
-.nav_toggle.show i:nth-child(1) {
-  transform: translateY(10px) rotate(-45deg);
-}
-
-.nav_toggle.show i:nth-child(2) {
-  opacity: 0;
-}
-
-.nav_toggle.show i:nth-child(3) {
-  transform: translateY(-12px) rotate(45deg);
-}
-
-.nav {
+.btn {
+  /* ボタンの配置位置  */
   position: fixed;
-  top: 3rem;
-  left: 0;
+  top: 42px;
+  right: 4%;
+  /* ボタンの大きさ  */
+  width: 8%;
+  height: 48px;
+  /* 最前面に */
+  z-index: 10000;
+}
+
+.btn-line {
+  display: block;
+  position: relative;
+  /* バーガー線の位置基準として設定 */
+  width: 100%;
+  /* 線の長さと高さ */
+  height: 4px;
+  background-color: #775B3C;
+  /* バーガー線の色 */
+  transition: .2s;
+}
+
+.btn-line::before,
+.btn-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #775B3C;
+  transition: .5s;
+}
+
+.btn-line::before {
+  /* 上の線の位置 */
+  transform: translateY(-16px);
+}
+
+.btn-line::after {
+  /* 下の線の位置 */
+  transform: translateY(16px);
+}
+
+.menu.open {
   right: 0;
-  bottom: 0;
-  padding: 1rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .5s, visibility .5s;
 }
 
-.nav.show {
-  opacity: 1;
-  visibility: visible;
+.btn-line.open {
+  background-color: transparent;
+  /* 真ん中の線を透明に */
+}
+
+.btn-line.open::before,
+.btn-line.open::after {
+  content: "";
+  background-color: #EEE1D1;
+  /* 上下の線の色を変える */
+  transition: .2s;
+}
+
+.btn-line.open::before {
+  transform: rotate(20deg);
+  /* 上の線を傾ける */
+}
+
+.btn-line.open::after {
+  transform: rotate(-20deg);
+  /* 下の線を傾ける */
 }
 
 
 
 
-
-
-
+.head-over {
+  height: 100vh;
+}
 
 .head-bg {
   position: absolute;
@@ -274,20 +172,10 @@ li {
   }
 }
 
-.head-circle3 {
-  width: 40%;
-  margin-top: -10%;
-  margin-left: 30%;
-}
-
-.space {
-  width: 10%;
-}
-
 .head-circle4 {
   width: 20%;
   margin-left: 5%;
-  margin-top: -10%;
+  margin-top: 0%;
 
   animation-name: rotate;
   animation-duration: 28s;
@@ -313,20 +201,28 @@ li {
 }
 
 .explaination {
-  text-align: center;
+  /* margin-top: 5vh; */
+  width: 50%;
+  margin-left: 25%;
+  /* padding-top: 20vh; */
   position: relative;
-  margin-top: -3%;
+  background-image: url(../images/circlebg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .explaination h1 {
-  margin-left: 40.5%;
-  margin-bottom: 2%;
-  width: 19%;
+  margin-left: 25%;
+  margin-bottom: 5%;
+  text-align: center;
+  width: 50%;
   font-size: 30px;
   background: linear-gradient(transparent 75%, #EDA85B 0%);
 }
 
 .explaination p {
+  text-align: center;
   font-size: 19px;
   font-weight: 700;
 }
@@ -338,9 +234,7 @@ li {
 }
 
 .str-p-h1 {
-  margin-left: 40.5%;
   margin-bottom: 2%;
-  width: 19%;
   font-size: 30px;
   background: linear-gradient(transparent 75%, #EDA85B 0%);
 }
@@ -413,6 +307,12 @@ li {
 .box1-p {
   margin-top: 6%;
   font-size: 18px;
+  width: 45%;
+  background-image: url(../images/strbg.png);
+  background-size: contain;
+  /* background-position-x: left;
+  background-position-y: top; */
+  background-repeat: no-repeat;
 }
 
 .open-box2 h1 {
@@ -430,6 +330,10 @@ li {
 .box2-p {
   margin-top: 3%;
   width: 30%;
+  background-image: url(../images/strbg.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .box2-p h2 {
@@ -458,6 +362,11 @@ li {
   margin-top: 6%;
   font-size: 18px;
   width: 45%;
+  background-image: url(../images/strbg.png);
+  background-size: contain;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
 }
 
 .open-box3 h1 {
@@ -467,12 +376,14 @@ li {
 }
 
 .reason-box {
+  padding-top: 10vh;
   margin-bottom: 10%;
+  height: 90vh;
 }
 
 .reason-box h1 {
   font-weight: 300;
-  width: 22%;
+  width: 50%;
   padding: 30px 0 30px 13%;
   /* padding上右下を指定 */
   font-size: 28px;
@@ -495,24 +406,25 @@ li {
   font-size: 16px;
   background-color: #775B3C;
   color: #EEE1D1;
-  width: 18%;
+  width: 40%;
   padding: 30px 0 30px 13%;
   border-radius: 7px;
 }
 
 .reason-button {
   /* background-color: #EEE1D1; */
-  border-radius: 1000px;
-  width: 300px;
-  height: 170px;
+  /* border-radius: 1000px; */
+  width: 25vh;
+  height: 25vh;
   text-align: center;
-  padding-top: 130px;
-  background-repeat: repeat;
-  background-position: 10% center;
-  background-size: 100% 100%;
+  padding-top: 35%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-decoration: none;
   font-weight: 300;
   font-size: 30px;
+  transform: rotateZ(-45deg);
 }
 
 .left-box {
@@ -520,57 +432,64 @@ li {
 }
 
 .right-box {
-  margin-left: 10%;
-  margin-top: -15%;
+  width: 40%;
+  margin-left: 45%;
+  margin-top: -15vh;
+  transform: rotateZ(45deg);
+}
+
+.left-ls {
+  display: flex;
+
+}
+
+.right-tt {
+  display: flex;
 }
 
 .looking {
   background-image: url(../images/circle1.png);
   transition: 0.5s;
-  transform: rotateZ(0deg);
 }
 
 .looking:hover {
   transition: 2s;
-  transform: rotateZ(90deg);
+  transform: rotateZ(45deg);
 }
 
 .smell {
   background-image: url(../images/circle2.png);
-  margin-left: 28%;
-  margin-top: -4%;
+  /* margin-left: 28%; */
+  /* margin-top: -4%; */
   transition: 0.5s;
-  transform: rotateZ(0deg);
 }
 
 .smell:hover {
   transition: 2s;
-  transform: rotateZ(90deg);
+  transform: rotateZ(45deg);
 }
 
 .taste {
   background-image: url(../images/circle3.png);
-  margin-left: -28%;
-  margin-top: -18%;
+  /* margin-left: -28%;
+  margin-top: -18%; */
   transition: 0.5s;
-  transform: rotateZ(0deg);
 }
 
 .taste:hover {
   transition: 2s;
-  transform: rotateZ(90deg);
+  transform: rotateZ(45deg);
 }
 
 .texture {
   background-image: url(../images/circle4.png);
-  margin-top: -7%;
+  /* margin-top: -7%; */
   transition: 0.5s;
-  transform: rotateZ(0deg);
 }
 
 .texture:hover {
   transition: 2s;
-  transform: rotateZ(90deg);
+  transform: rotateZ(45deg);
 }
 
 .modal {
@@ -594,6 +513,36 @@ li {
   background: #fabb51;
 }
 
+.modaal-h1 {
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+}
+
+.modaal-img {
+  width: 40%;
+  /* float: left; */
+  margin-bottom: 3vh;
+}
+
+.modaal-img-texture {
+  width: 30%;
+  /* float: left; */
+  margin-bottom: 3vh;
+  margin-left: 10%;
+}
+
+.modaal-p-box {
+  text-align: left;
+  width: 50%;
+  margin: 2vh;
+  font-size: 20px;
+}
+
+.modaal-passage {
+  display: flex;
+}
+
 
 
 
@@ -607,8 +556,8 @@ li {
 
 .sheet-box img {
   margin-top: 10%;
-  width: 30%;
-  height: 60vh;
+  width: 45vh;
+  height: 63vh;
   margin-right: 5%;
 }
 
@@ -634,11 +583,14 @@ li {
   font-weight: 200;
   margin-left: 10%;
   background: linear-gradient(transparent 75%, #EDA85B 0%);
-  width: 22%;
+  width: 33%;
   margin-bottom: 4%;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .passage3 {
+  margin-top: 10vh;
   font-weight: 200;
   /* margin-top: 500%; */
 }

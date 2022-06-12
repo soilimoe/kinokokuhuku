@@ -1,0 +1,30 @@
+ @media all and (max-width: 480px) {
+   .str-p-h1 {
+     width: 80%;
+     margin-left: 10%;
+   }
+ }
+
+ @media all and (max-width: 1064px) {
+   .right-box {
+     width: 65%;
+     /* background: #000; */
+   }
+
+   .str-p-h1 {
+     width: 30%;
+     margin-left: 35%;
+   }
+ }
+
+ @media all and (min-width: 1064px) {
+   .right-box {
+     width: 35%;
+     /* background: #000; */
+   }
+
+   .str-p-h1 {
+     width: 28%;
+     margin-left: 36%;
+   }
+ }

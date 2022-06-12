@@ -1,20 +1,8 @@
 $(function ($) {
-  // $('.explaination').hover(
-  //   function () {
-  //     $('.explaination').css('background-color', '#EE881f');
-  //   }
-  // );
-
-  // $(".head-circle1").rotate(100);
-  // const ham = $('#js-hamburger');
-  // const nav = $('#js-nav');
-  // ham.on('click', function () { //ハンバーガーメニューをクリックしたら
-  //   ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
-  //   nav.toggleClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
-
-  // });
-  $('.nav_toggle').on('click', function () {
-    $('.nav_toggle, .nav').toggleClass('show');
+  $(function () {
+    $('.js-btn').on('click', function () {        // js-btnクラスをクリックすると、
+      $('.menu , .btn-line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+    })
   });
 
 
