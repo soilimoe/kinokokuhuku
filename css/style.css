@@ -41,6 +41,7 @@ button {
   /* メニューの位置マイナス指定で画面外に */
   position: fixed;
   right: -100%;
+  z-index: 100;
 }
 
 .menu li {
@@ -175,7 +176,7 @@ button {
 .head-circle4 {
   width: 20%;
   margin-left: 5%;
-  margin-top: 0%;
+  margin-top: 10%;
 
   animation-name: rotate;
   animation-duration: 28s;
@@ -201,36 +202,44 @@ button {
 }
 
 .explaination {
-  /* margin-top: 5vh; */
+  margin-top: 35vh;
   width: 50%;
   margin-left: 25%;
-  /* padding-top: 20vh; */
   position: relative;
-  background-image: url(../images/circlebg.png);
+  /* background-image: url(../images/circlebg.png);
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .explaination h1 {
   margin-left: 25%;
   margin-bottom: 5%;
+  /* margin-top: 10%; */
   text-align: center;
   width: 50%;
-  font-size: 30px;
+  font-size: 26px;
   background: linear-gradient(transparent 75%, #EDA85B 0%);
 }
 
 .explaination p {
   text-align: center;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
+}
+
+.explain-bg {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  margin-top: -65vh;
+  margin-left: 25%;
 }
 
 .strong-point {
   text-align: center;
   position: relative;
-  margin-top: 30%;
+  margin-top: 80vh;
 }
 
 .str-p-h1 {
@@ -376,7 +385,7 @@ button {
 }
 
 .reason-box {
-  padding-top: 10vh;
+  padding-top: 20vh;
   margin-bottom: 10%;
   height: 90vh;
 }
@@ -411,20 +420,20 @@ button {
   border-radius: 7px;
 }
 
-.reason-button {
+.eason-button {
   /* background-color: #EEE1D1; */
   /* border-radius: 1000px; */
   width: 25vh;
   height: 25vh;
   text-align: center;
-  padding-top: 35%;
-  background-repeat: no-repeat;
+  padding-top: 30%;
+  /* background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
   text-decoration: none;
   font-weight: 300;
-  font-size: 30px;
-  transform: rotateZ(-45deg);
+  font-size: 26px;
+  /* transform: rotateZ(-45deg); */
 }
 
 .left-box {
@@ -435,19 +444,50 @@ button {
   width: 40%;
   margin-left: 45%;
   margin-top: -15vh;
+  /* transform: rotateZ(45deg); */
+}
+
+.modal-aimg-left {
+  display: block;
+}
+
+.modal-aimg-right {
+  display: block;
+}
+
+.modal-a-text {
+  width: 34vh;
+  height: 34vh;
+  position: relative;
   transform: rotateZ(45deg);
+  margin-top: 10vh;
 }
 
-.left-ls {
-  display: flex;
-
+.modal-a-text a {
+  width: 15vh;
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 26px;
+  margin: 2vh 2vh 0 0;
 }
 
-.right-tt {
-  display: flex;
+.modal-a-img {
+  position: absolute;
+  transform: rotateZ(45deg);
+  margin-top: 10vh;
 }
 
-.looking {
+.modal-a-img img {
+  width: 15vw;
+  height: 15vw;
+  margin: 2vh 2vh 0 0;
+  transform: rotateZ(0deg);
+}
+
+/* .looking {
   background-image: url(../images/circle1.png);
   transition: 0.5s;
 }
@@ -459,8 +499,6 @@ button {
 
 .smell {
   background-image: url(../images/circle2.png);
-  /* margin-left: 28%; */
-  /* margin-top: -4%; */
   transition: 0.5s;
 }
 
@@ -471,8 +509,6 @@ button {
 
 .taste {
   background-image: url(../images/circle3.png);
-  /* margin-left: -28%;
-  margin-top: -18%; */
   transition: 0.5s;
 }
 
@@ -483,24 +519,23 @@ button {
 
 .texture {
   background-image: url(../images/circle4.png);
-  /* margin-top: -7%; */
   transition: 0.5s;
 }
 
 .texture:hover {
   transition: 2s;
   transform: rotateZ(45deg);
-}
+} */
 
 .modal {
   display: none;
 }
 
-.modal-box {
+/* .modal-box {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-}
+} */
 
 .modaal-content-container {
   text-align: center;
@@ -543,14 +578,12 @@ button {
   display: flex;
 }
 
-
-
-
 .sheet-box {
   background-color: #EEE1D1;
   display: flex;
   padding-left: 20%;
   height: 100vh;
+  margin-top: 40vh;
   /* float: left; */
 }
 
@@ -567,6 +600,7 @@ button {
 
 .right-box2 h1 {
   font-weight: 200;
+  font-size: 28px;
 }
 
 .right-box2 h1 mark {
@@ -583,14 +617,15 @@ button {
   font-weight: 200;
   margin-left: 10%;
   background: linear-gradient(transparent 75%, #EDA85B 0%);
-  width: 33%;
+  width: 33vh;
+  font-size: 28px;
   margin-bottom: 4%;
   text-align: center;
   margin-top: 10px;
 }
 
 .passage3 {
-  margin-top: 10vh;
+  margin-top: 6vh;
   font-weight: 200;
   /* margin-top: 500%; */
 }
@@ -600,23 +635,25 @@ button {
 }
 
 .rb-passage {
-  margin-bottom: 8%;
+  margin-bottom: 10vh;
 }
 
 .down-button {
-  margin-top: 20px;
   margin-left: 15%;
   text-decoration: none;
   color: #fff;
-  padding: 40px 30px 40px 30px;
+  padding: 45px 33px 35px 27px;
   background-image: url(../images/button.png);
 
   background-repeat: repeat;
   background-position: 10% center;
   background-size: 100% 100%;
   font-weight: 300;
+  transition: 0.5s;
 }
 
 .down-button:hover {
-  padding: 48px 36px 48px 36px;
+  padding: 53px 38px 43px 34px;
+  transition: 1s;
+  text-shadow: -5px 5px 12px #EEE1D1;
 }

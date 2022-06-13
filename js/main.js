@@ -80,6 +80,58 @@ $(function ($) {
 
   $(".reason-button").modaal();
 
+  $('.looking').hover(
+    function () {
+      //マウスカーソルが重なった時の処理
+      $('.looking-bg-img').css("transform", "rotateZ(45deg)");
+      $('.looking-bg-img').css("transsition", "1s");
+    },
+    function () {
+      //マウスカーソルが離れた時の処理
+      $('.looking-bg-img').css("transform", "rotateZ(0deg)");
+      $('.looking-bg-img').css("transition", "0.5s");
+    }
+  );
+
+  $('.smell').hover(
+    function () {
+      //マウスカーソルが重なった時の処理
+      $('.smell-bg-img').css("transform", "rotateZ(45deg)");
+      $('.smell-bg-img').css("transsition", "1s");
+    },
+    function () {
+      //マウスカーソルが離れた時の処理
+      $('.smell-bg-img').css("transform", "rotateZ(0deg)");
+      $('.smell-bg-img').css("transition", "0.5s");
+    }
+  );
+
+  $('.taste').hover(
+    function () {
+      //マウスカーソルが重なった時の処理
+      $('.taste-bg-img').css("transform", "rotateZ(45deg)");
+      $('.taste-bg-img').css("transsition", "1s");
+    },
+    function () {
+      //マウスカーソルが離れた時の処理
+      $('.taste-bg-img').css("transform", "rotateZ(0deg)");
+      $('.taste-bg-img').css("transition", "0.5s");
+    }
+  );
+
+  $('.texture').hover(
+    function () {
+      //マウスカーソルが重なった時の処理
+      $('.texture-bg-img').css("transform", "rotateZ(45deg)");
+      $('.texture-bg-img').css("transsition", "1s");
+    },
+    function () {
+      //マウスカーソルが離れた時の処理
+      $('.texture-bg-img').css("transform", "rotateZ(0deg)");
+      $('.texture-bg-img').css("transition", "0.5s");
+    }
+  );
+
   // $('nav a[href^="#"]').click(function () {
   //   var adjust = 0;
   //   var speed = 400;
