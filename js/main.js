@@ -5,6 +5,10 @@ $(function ($) {
     })
   });
 
+  $('.menu-list').click(function () {
+    $('.menu , .btn-line').removeClass('open');
+  });
+
 
 
   $('.price-all').hide();
@@ -78,7 +82,23 @@ $(function ($) {
   //   }
   // });
 
-  $(".reason-button").modaal();
+  $(".reason-button").modaal({
+    hide_close: true,
+    background: '#775B3C',
+    overlay_opacity: 0.4
+  });
+
+  $('.close-button').click(function () {
+    $(".reason-button").modaal('close');
+  });
+
+  // $(".reason-button").click(function () {
+  //   $('.js-btn').hide();
+  // });
+
+  // $("#modaal-close").click(function () {
+  //   $('.js-btn').fadeIn();
+  // });
 
   $('.looking').hover(
     function () {

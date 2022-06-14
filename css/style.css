@@ -42,6 +42,7 @@ button {
   position: fixed;
   right: -100%;
   z-index: 100;
+  justify-content: space-around;
 }
 
 .menu li {
@@ -57,7 +58,7 @@ button {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  margin-top: 12vh;
+  /* margin-top: 12vh; */
 }
 
 .btn {
@@ -69,7 +70,7 @@ button {
   width: 8%;
   height: 48px;
   /* 最前面に */
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .btn-line {
@@ -293,7 +294,12 @@ button {
 
 .box-img {
   width: 40%;
-  margin-top: 0;
+  object-fit: contain;
+  /* margin-top: 0; */
+}
+
+.box-img-price {
+  margin-top: 10vh;
 }
 
 .back {
@@ -441,29 +447,60 @@ button {
 }
 
 .right-box {
-  width: 40%;
-  margin-left: 45%;
+  width: 40vw;
+  margin-left: 45vw;
   margin-top: -15vh;
   /* transform: rotateZ(45deg); */
 }
 
-.modal-aimg-left {
+/* .modal-aimg-left {
   display: block;
 }
 
 .modal-aimg-right {
   display: block;
-}
+} */
+
+/* .reason-button {
+  display: block;
+  background-position: center;
+} */
 
 .modal-a-text {
   width: 34vh;
   height: 34vh;
   position: relative;
-  transform: rotateZ(45deg);
-  margin-top: 10vh;
+  margin-top: 4vh;
+  /* margin-left: 12vw; */
+  /* transform: rotateZ(0deg); */
 }
 
+/* .looking {
+  margin-left: 21.5vw;
+}
+
+.smell {
+  margin-left: 34.5vw;
+}
+
+.taste {
+  margin-left: 10.5vw;
+}
+
+.texture {
+  margin-left: 21.5vw;
+} */
+
 .modal-a-text a {
+  width: 15vh;
+  height: 15vh;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 26px;
+  /* margin: 2vh 2vh 0 0; */
+}
+
+/* .modal-a-text a {
   width: 15vh;
   height: 15vh;
   background-color: rgba(0, 0, 0, 0.2);
@@ -472,12 +509,12 @@ button {
   font-weight: 300;
   font-size: 26px;
   margin: 2vh 2vh 0 0;
-}
+} */
 
 .modal-a-img {
   position: absolute;
   transform: rotateZ(45deg);
-  margin-top: 10vh;
+  margin-top: -4vh;
 }
 
 .modal-a-img img {
@@ -529,6 +566,7 @@ button {
 
 .modal {
   display: none;
+  z-index: 10000;
 }
 
 /* .modal-box {
@@ -539,6 +577,13 @@ button {
 
 .modaal-content-container {
   text-align: center;
+  padding: 0;
+  /* background: rgba(0, 0, 0, 0);
+  border-radius: 15px; */
+}
+
+.modaal-container {
+  background: none;
 }
 
 .modaal-close:focus:after,
@@ -552,16 +597,25 @@ button {
   text-align: center;
   margin-top: 3vh;
   margin-bottom: 5vh;
+  font-weight: 400;
+  color: #000;
 }
 
 .modaal-img {
-  width: 40%;
+  width: 90%;
+  height: auto;
   /* float: left; */
   margin-bottom: 3vh;
+  object-fit: cover;
+}
+
+.modaal-img-div {
+  width: 45%;
 }
 
 .modaal-img-texture {
-  width: 30%;
+  width: auto;
+  height: 35vh;
   /* float: left; */
   margin-bottom: 3vh;
   margin-left: 10%;
@@ -569,13 +623,59 @@ button {
 
 .modaal-p-box {
   text-align: left;
-  width: 50%;
+  width: 55%;
   margin: 2vh;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.modaal-p-box p {
+  color: #000;
 }
 
 .modaal-passage {
   display: flex;
+}
+
+.modaal-brown-bg {
+  background: #EEE1D1;
+  padding: 5vh 3vw 3vw 3vw;
+  border-radius: 15px;
+}
+
+.white-bg {
+  background: #fff;
+  border-radius: 15px;
+  padding: 5vh 3vw 5vh 3vw;
+}
+
+.close-button {
+  display: inline-block;
+  padding: 25px 0;
+  margin-bottom: 2vh;
+  margin-left: 40%;
+  /* justify-content: center; */
+}
+
+.close-button::before,
+.close-button::after {
+  display: block;
+  content: "";
+  width: 10vw;
+  height: 1px;
+  background: #775B3C;
+}
+
+.close-button::before {
+  transform: rotate(-16deg);
+}
+
+.close-button::after {
+  transform: rotate(16deg);
+}
+
+.modaal-close-in {
+  width: 100%;
 }
 
 .sheet-box {
